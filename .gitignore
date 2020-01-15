@@ -1,7 +1,6 @@
 node_modules
-dist/dev
+dist
 uploads/**/*
 git
 .idea
 .DS_Store
-

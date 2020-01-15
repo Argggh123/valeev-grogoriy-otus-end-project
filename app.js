@@ -2,15 +2,23 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
+const path = require('path');
 
 const PORT = process.env.PORT || 5000;
 const app = express();
 app.use(cors());
 app.use('/uploads', express.static('uploads'));
 app.use(express.json({ extended: true }));
-
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/memes', require('./routes/memes'));
+
+if (process.env.NODE_ENV === 'production') {
+  app.use('/', express.static(path.join(__dirname, 'dist', 'prod')));
+
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'dist', 'prod', 'index.html'));
+  });
+}
 
 async function start() {
   try {

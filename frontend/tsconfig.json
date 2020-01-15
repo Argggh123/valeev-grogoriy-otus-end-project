@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "outDir": "../dist/",
+    "sourceMap": true,
+    "noImplicitReturns": true,
+    "noImplicitAny": true,
+    "allowJs": true,
+    "target": "es5",
+    "module": "es6",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "jsx": "react",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "dom",
+      "es2017"
+    ]
+  },
+  "include": [
+    "./src/**/*",
+    "../../../Library/Preferences/PhpStorm2019.3/javascript/nodejs/12.13.0/node-typings/node_modules/@types/node/globals.d.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

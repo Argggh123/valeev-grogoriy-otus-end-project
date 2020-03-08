@@ -21,7 +21,6 @@
     "roboto-fontface": "^0.10.0"
   },
   "scripts": {
-    "install": "yarn",
     "start": "parcel ./public/index.html -p 4000 -d ../dist/dev  --cache-dir ../dist/dev/cash --open",
     "build": "cross-env NODE_ENV=production parcel build ./public/index.html"
   },

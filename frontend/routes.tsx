@@ -1,6 +1,6 @@
 import React from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
-import LinksPage from './src/pages/LinksPage';
+import MyMemesPage from './src/pages/MyMemesPage';
 import DetailsPage from './src/pages/DetailsPage';
 import CreatePage from './src/pages/CreatePage/CreatePage';
 import AuthPage from './src/pages/AuthPage';
@@ -10,8 +10,8 @@ export const useRoutes = (isAuth: boolean) => {
   if (isAuth) {
     return (
       <Switch>
-        <Route exac path={'/links'}>
-          <LinksPage />
+        <Route exac path={'/myMemes'}>
+          <MyMemesPage />
         </Route>
         <Route exac path={'/create'}>
           <CreatePage />

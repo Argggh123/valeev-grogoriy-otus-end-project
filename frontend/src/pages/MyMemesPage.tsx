@@ -4,7 +4,7 @@ import { AuthContext } from '../context/Auth';
 import Loader from '../components/Loader';
 import MemCard from '../components/MemCard';
 
-const LinksPage = () => {
+const MyMemesPage = () => {
   const [memes, setMemes] = useState(null);
   const { loading, request } = useHttp();
   const { token } = useContext(AuthContext);
@@ -41,10 +41,10 @@ const LinksPage = () => {
 
   return (
     <div>
-      <h1>Links Page</h1>
+      <h1>My Memes Page</h1>
       {getMemes(memes)}
   </div>
   );
 };
 
-export default LinksPage;
+export default MyMemesPage;

@@ -27,7 +27,7 @@ const Navbar = ({ isAuth }: any) => {
           {isAuth ? <NavLink to={'/create'}>Создать Мем</NavLink> : null}
         </li>
         <li>
-          {isAuth ? <NavLink to={'/links'}>Мои Мемы</NavLink> : null}
+          {isAuth ? <NavLink to={'/myMemes'}>Мои Мемы</NavLink> : null}
         </li>
         <li>
           <a onClick={logout}>{isAuth ? 'Выйти' : 'Войти'}</a>

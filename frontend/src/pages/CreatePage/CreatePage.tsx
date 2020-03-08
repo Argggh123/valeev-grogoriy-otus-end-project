@@ -56,7 +56,7 @@ const CreatePage = () => {
     }
     try {
       const { mem } = await request(
-        `http://localhost:${process.env.PORT}/api/memes/create`,
+        `/api/memes/create`,
         'POST',
         formData,
         {

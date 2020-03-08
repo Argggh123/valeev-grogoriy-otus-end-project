@@ -21,12 +21,12 @@ const MemCard = ({ mem }: any) => {
     if (mem.mimeType && (mem.mimeType === 'video/mpd' || mem.mimeType === 'video/webm')) {
       return (
         <video>
-          <source src={`http://localhost:${process.env.PORT}/${mem.memesImage}`} />
+          <source src={`/${mem.memesImage}`} />
         </video>
       );
     }
 
-    return <img src={`http://localhost:${process.env.PORT}/${mem.memesImage}`} alt='' />;
+    return <img src={`/${mem.memesImage}`} alt='' />;
   };
 
   const getMemesTags = () => {

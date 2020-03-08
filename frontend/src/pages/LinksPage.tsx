@@ -12,7 +12,7 @@ const LinksPage = () => {
   const fetchMemes = useCallback(async (token) => {
     try {
       const memesArr = await request(
-        'http://localhost:3000/api/memes/',
+        `http://localhost:${process.env.PORT}/api/memes/`,
         'GET',
         null,
         {

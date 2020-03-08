@@ -26,7 +26,7 @@ export const useAuth = () => {
 
   const authenticate = useCallback(async (token) => {
     try {
-      const data = await request('http://localhost:3000/api/auth/authorize', 'POST', null, {
+      const data = await request(`http://localhost:${process.env.PORT}/api/auth/authorize`, 'POST', null, {
         Authorization: `Bearer ${token}`,
       });
       if (data) {

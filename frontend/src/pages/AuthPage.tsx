@@ -26,7 +26,7 @@ const AuthPage = () => {
   const register = async () => {
     try {
       const data = await request(
-        'http://localhost:3000/api/auth/register',
+        `http://localhost:${process.env.PORT}/api/auth/register`,
         'POST',
         { ...form },
         headers,
@@ -39,7 +39,7 @@ const AuthPage = () => {
   const login = async () => {
     try {
       const data = await request(
-        'http://localhost:3000/api/auth/login',
+        `http://localhost:${process.env.PORT}/api/auth/login`,
         'POST',
         { ...form },
         headers,

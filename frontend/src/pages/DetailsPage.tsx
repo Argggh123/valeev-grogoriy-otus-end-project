@@ -13,7 +13,7 @@ const DetailsPage = () => {
 
   const getLink = useCallback(async () => {
     try {
-      const data = await request(`http://localhost:3000/api/memes/${id}`, 'GET', null, {
+      const data = await request(`http://localhost:${process.env.PORT}/api/memes/${id}`, 'GET', null, {
         Authorization: `Bearer ${token}`,
       });
 

@@ -9,7 +9,7 @@ const AllMemes = () => {
   const { token } = useContext(AuthContext);
 
   const fetchMemes = useCallback(async () => {
-    const { memesArr } = await request('http://localhost:3000/api/memes/all', 'GET', null, {
+    const { memesArr } = await request(`http://localhost:${process.env.PORT}/api/memes/all`, 'GET', null, {
       Authorization: `Bearer ${token}`,
     });
     console.log(memesArr);

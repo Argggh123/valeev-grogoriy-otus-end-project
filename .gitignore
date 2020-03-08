@@ -1,6 +1,7 @@
 node_modules
-dist
+frontend/dist
 uploads/**/*
+.env
 git
 .idea
 .DS_Store

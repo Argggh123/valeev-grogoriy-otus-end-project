@@ -13,10 +13,10 @@ app.use('/api/auth', require('./routes/auth'));
 app.use('/api/memes', require('./routes/memes'));
 
 if (process.env.NODE_ENV === 'production') {
-  app.use('/', express.static(path.join(__dirname, 'dist', 'prod')));
+  app.use('/', express.static(path.join(__dirname, 'frontend', 'dist')));
 
   app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'dist', 'prod', 'index.html'));
+    res.sendFile(path.resolve(__dirname, 'frontend', 'dist', 'index.html'));
   });
 }
 

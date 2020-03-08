@@ -31,20 +31,6 @@ const MemesUploader = (props: any) => {
                   </section>
                 )}
               </Dropzone>
-              <p style={{
-                textAlign: 'center',
-                margin: '15px 0'
-              }}>или</p>
-            <div className='input-field'>
-              <input placeholder='Вставте ссылку'
-                     id='memesLink'
-                     type='text'
-                     name='memesLink'
-                     className='yellow-input'
-                     onChange={props.changeImage}
-              />
-              <label htmlFor='memesLink' className='white-text'>Ссылка на ресурс</label>
-            </div>
               <div className='input-field'>
               <input placeholder='Пишите теги через запятую'
                      id='memesLink'
